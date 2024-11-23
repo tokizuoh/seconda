@@ -1,0 +1,16 @@
+query($owner: String!, $name: String!, $filePath: String!) {
+  repository(owner: $owner, name: $name) {
+    object(expression: "main") {
+      ... on Commit {
+        history(first: 1, path: $filePath) {
+          edges {
+            node {
+              committedDate
+              message
+            }
+          }
+        }
+      }
+    }
+  }
+}
