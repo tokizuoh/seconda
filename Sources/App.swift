@@ -50,7 +50,7 @@ func fetchLatestCommitGraphQL(
 }
 
 @main
-struct MyApp {
+struct App {
     static func main() async {
         let owner = "swiftlang"
         let repo = "swift"
