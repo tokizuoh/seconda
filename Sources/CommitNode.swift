@@ -6,4 +6,5 @@
 struct CommitNode: Codable {
     let committedDate: String
     let message: String
+    let url: String
 }
