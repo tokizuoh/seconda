@@ -1,0 +1,15 @@
+{
+  "originHash" : "e8419ee7e6ec9e04055e319228e6ad408d89dd5928e759c8bbce0b17e9fb6dd8",
+  "pins" : [
+    {
+      "identity" : "csfeedkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/thecatalinstan/CSFeedKit",
+      "state" : {
+        "revision" : "273343770028aea2a41f06ea3cec3f741c7b62c9",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 3
+}
