@@ -3,6 +3,7 @@ import Foundation
 func fetchLatestCommitGraphQL(
     owner: String,
     repo: String,
+    first: Int,
     filePath: String,
     token: String
 ) async throws -> CommitNode? {
@@ -14,6 +15,7 @@ func fetchLatestCommitGraphQL(
     let variables: [String: Any] = [
         "owner": owner,
         "name": repo,
+        "first": first,
         "filePath": filePath
     ]
     
@@ -67,6 +69,7 @@ struct App {
             if let commit = try await fetchLatestCommitGraphQL(
                 owner: owner,
                 repo: repo,
+                first: 1,
                 filePath: filePath,
                 token: token
             ) {

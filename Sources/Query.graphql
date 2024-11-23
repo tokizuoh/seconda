@@ -1,8 +1,8 @@
-query($owner: String!, $name: String!, $filePath: String!) {
+query($owner: String!, $name: String!, $first: Int!, $filePath: String!) {
   repository(owner: $owner, name: $name) {
     object(expression: "main") {
       ... on Commit {
-        history(first: 1, path: $filePath) {
+        history(first: $first, path: $filePath) {
           edges {
             node {
               committedDate
