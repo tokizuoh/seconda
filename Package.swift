@@ -19,6 +19,6 @@ let package = Package(
                 .copy("Query.graphql"),
                 .copy("token.txt")
             ]
-        ),
+        )
     ]
 )
