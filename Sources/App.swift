@@ -1,12 +1,12 @@
 import Foundation
 
-func fetchLatestCommitGraphQL(
+func fetchLatestCommitList(
     owner: String,
     repo: String,
     first: Int,
     filePath: String,
     token: String
-) async throws -> CommitNode? {
+) async throws -> [CommitNode]? {
     let url = URL(string: "https://api.github.com/graphql")!
     
     let fileURL = Bundle.module.url(forResource: "Query", withExtension: "graphql")!
@@ -47,8 +47,7 @@ func fetchLatestCommitGraphQL(
         .object?
         .history
         .edges
-        .first?
-        .node
+        .map(\.node)
 }
 
 @main
@@ -66,15 +65,21 @@ struct App {
         #endif
         
         do {
-            if let commit = try await fetchLatestCommitGraphQL(
+            if let commitList = try await fetchLatestCommitList(
                 owner: owner,
                 repo: repo,
                 first: 1,
                 filePath: filePath,
                 token: token
             ) {
-                print("Latest Commit Date: \(commit.committedDate)")
-                print("Latest Commit Message: \(commit.message)")
+                for commit in commitList {
+                    let urlString = "https://github.com/\(owner)/\(repo)/blob/main/\(filePath)"
+                    // https://github.com/swiftlang/swift/commit/7a31f393576117ecc399b78dd593462434660f05
+                    let commitURLString = "\(commit.url)"
+                    print(urlString)
+                    print(commitURLString)
+                    print(commit.message)
+                }
             } else {
                 print("No commit found for the specified file.")
             }
