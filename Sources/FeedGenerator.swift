@@ -33,10 +33,6 @@ struct FeedGenerator {
     }
     
     private static func write(feed: CSRSSFeed) throws {
-        let fileManager = FileManager.default
-        let currentDirectoryURL = URL(fileURLWithPath: fileManager.currentDirectoryPath)
-        
-        
         guard let workingDirectory = ProcessInfo.processInfo.environment["SECONDA_WORKING_DIRECTORY"],
               let fileURL = URL(filePath: FilePath("\(workingDirectory)/Generated/rss.xml")) else {
             throw SecondaError.emptyWorkingDirectory
