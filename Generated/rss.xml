@@ -1,0 +1,51 @@
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+    <title>swiftlang/swift CHANGELOG.md</title>
+    <link>https://github.com/tokizuoh/seconda/swift/rss.xml</link>
+    <description><![CDATA[description]]></description>
+    <lastBuildDate>Sun, 24 Nov 2024 17:58:33 +0900</lastBuildDate>
+    <pubDate>Sun, 24 Nov 2024 17:58:33 +0900</pubDate>
+    <language>en-JP</language>
+    <ttl>3600</ttl>
+    <item>
+        <title>Update CHANGELOG.md (#77093)</title>
+        <link>https://github.com/swiftlang/swift/commit/7a31f393576117ecc399b78dd593462434660f05</link>
+        <description><![CDATA[Update CHANGELOG.md (#77093)]]></description>
+        <guid isPermaLink="true">https://github.com/swiftlang/swift/commit/7a31f393576117ecc399b78dd593462434660f05</guid>
+    </item>
+    <item>
+        <title>SE-0444: Promote MemberImportVisibility to an upco...</title>
+        <link>https://github.com/swiftlang/swift/commit/d37303680552665058278db6349f73f92ed2bf5c</link>
+        <description><![CDATA[SE-0444: Promote MemberImportVisibility to an upcoming feature.
+
+The proposal has been accepted, so `MemberImportVisibility` is no longer
+experimental.
+
+Resolves rdar://126284512.]]></description>
+        <guid isPermaLink="true">https://github.com/swiftlang/swift/commit/d37303680552665058278db6349f73f92ed2bf5c</guid>
+    </item>
+    <item>
+        <title>Ignore inactive IfConfigDecls in SourceKit's synta...</title>
+        <link>https://github.com/swiftlang/swift/commit/9936f64c2a1297ccb46165f181de7ccafd0892c7</link>
+        <description><![CDATA[Ignore inactive IfConfigDecls in SourceKit's syntax model
+
+Clients that need syntactic information should use SourceKit-LSP or
+swift-syntax.]]></description>
+        <guid isPermaLink="true">https://github.com/swiftlang/swift/commit/9936f64c2a1297ccb46165f181de7ccafd0892c7</guid>
+    </item>
+    <item>
+        <title>Changelog: add notes about SE-0442 Add a note abo...</title>
+        <link>https://github.com/swiftlang/swift/commit/7381bf0da9616b88b649c940ea29de9b4200cb95</link>
+        <description><![CDATA[Changelog: add notes about SE-0442
+
+Add a note about the accepted developer experience change from: https://github.com/swiftlang/swift-evolution/blob/main/proposals/0442-allow-taskgroup-childtaskresult-type-to-be-inferred.md]]></description>
+        <guid isPermaLink="true">https://github.com/swiftlang/swift/commit/7381bf0da9616b88b649c940ea29de9b4200cb95</guid>
+    </item>
+    <item>
+        <title>Fixed @preconcurrency syntax in CHANGELOG</title>
+        <link>https://github.com/swiftlang/swift/commit/2a188ed123da731dd3f1ec62a370573d37eccd51</link>
+        <description><![CDATA[Fixed @preconcurrency syntax in CHANGELOG]]></description>
+        <guid isPermaLink="true">https://github.com/swiftlang/swift/commit/2a188ed123da731dd3f1ec62a370573d37eccd51</guid>
+    </item>
+</channel>
+</rss>
