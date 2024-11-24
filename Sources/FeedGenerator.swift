@@ -30,7 +30,20 @@ struct FeedGenerator {
         let feed = CSRSSFeed()
         feed.channels = [channel]
         
-        // TODO
-        print(feed.xmlElement().xmlString(options: .nodePrettyPrint))
+        write(feed: feed)
+        
+    }
+    
+    private static func write(feed: CSRSSFeed) {
+        let fileManager = FileManager.default
+        let currentDirectoryURL = URL(fileURLWithPath: fileManager.currentDirectoryPath)
+        let fileURL = currentDirectoryURL.appendingPathComponent("rss.xml")
+        
+        let content = feed.xmlElement().xmlString(options: .nodePrettyPrint)
+        do {
+            try content.write(to: fileURL, atomically: true, encoding: .utf8)
+        } catch {
+            print("error: \(error)")
+        }
     }
 }
