@@ -72,12 +72,12 @@ struct App {
                 filePath: filePath,
                 token: token
             ) {
-                FeedGenerator.generate(commitList: commitList)
+                try FeedGenerator.generate(commitList: commitList)
             } else {
                 print("No commit found for the specified file.")
             }
         } catch {
-            print("Failed to fetch commit: \(error)")
+            print("Failed to : \(error)")
         }
     }
 }

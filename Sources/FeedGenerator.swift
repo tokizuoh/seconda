@@ -6,7 +6,7 @@
 import CSFeedKit
 
 struct FeedGenerator {
-    static func generate(commitList: [CommitNode]) {
+    static func generate(commitList: [CommitNode]) throws {
         let channel = CSRSSFeedChannel(
             title: "swiftlang/swift CHANGELOG.md",
             link: "https://github.com/tokizuoh/seconda/swift/rss.xml",
@@ -30,20 +30,15 @@ struct FeedGenerator {
         let feed = CSRSSFeed()
         feed.channels = [channel]
         
-        write(feed: feed)
-        
+        try write(feed: feed)
     }
     
-    private static func write(feed: CSRSSFeed) {
+    private static func write(feed: CSRSSFeed) throws {
         let fileManager = FileManager.default
         let currentDirectoryURL = URL(fileURLWithPath: fileManager.currentDirectoryPath)
         let fileURL = currentDirectoryURL.appendingPathComponent("rss.xml")
         
         let content = feed.xmlElement().xmlString(options: .nodePrettyPrint)
-        do {
-            try content.write(to: fileURL, atomically: true, encoding: .utf8)
-        } catch {
-            print("error: \(error)")
-        }
+        try content.write(to: fileURL, atomically: true, encoding: .utf8)
     }
 }
