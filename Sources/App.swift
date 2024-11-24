@@ -68,7 +68,7 @@ struct App {
             if let commitList = try await fetchLatestCommitList(
                 owner: owner,
                 repo: repo,
-                first: 1,
+                first: 5,
                 filePath: filePath,
                 token: token
             ) {
