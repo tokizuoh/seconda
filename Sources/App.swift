@@ -72,14 +72,7 @@ struct App {
                 filePath: filePath,
                 token: token
             ) {
-                for commit in commitList {
-                    let urlString = "https://github.com/\(owner)/\(repo)/blob/main/\(filePath)"
-                    // https://github.com/swiftlang/swift/commit/7a31f393576117ecc399b78dd593462434660f05
-                    let commitURLString = "\(commit.url)"
-                    print(urlString)
-                    print(commitURLString)
-                    print(commit.message)
-                }
+                FeedGenerator.generate(commitList: commitList)
             } else {
                 print("No commit found for the specified file.")
             }
