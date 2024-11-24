@@ -16,9 +16,10 @@ struct FeedGenerator {
         var items: [CSRSSFeedItem] = []
         commitList.forEach { commit in
             let title = String(commit.message.prefix(50)) + (commit.message.count > 50 ? "..." : "")
+            let cleanedTitle = title.replacingOccurrences(of: "\\s*(\\n|\\r)\\s*", with: " ", options: .regularExpression)
 
             let item = CSRSSFeedItem(
-                title: title,
+                title: cleanedTitle,
                 link: commit.url,
                 description: commit.message
             )
