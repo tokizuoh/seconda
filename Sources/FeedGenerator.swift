@@ -4,6 +4,7 @@
 //
 
 import CSFeedKit
+import System
 
 struct FeedGenerator {
     static func generate(commitList: [CommitNode]) throws {
@@ -34,7 +35,12 @@ struct FeedGenerator {
     private static func write(feed: CSRSSFeed) throws {
         let fileManager = FileManager.default
         let currentDirectoryURL = URL(fileURLWithPath: fileManager.currentDirectoryPath)
-        let fileURL = currentDirectoryURL.appendingPathComponent("rss.xml")
+        
+        
+        guard let workingDirectory = ProcessInfo.processInfo.environment["SECONDA_WORKING_DIRECTORY"],
+              let fileURL = URL(filePath: FilePath("\(workingDirectory)/Generated/rss.xml")) else {
+            throw SecondaError.emptyWorkingDirectory
+        }
         
         let content = feed.xmlElement().xmlString(options: .nodePrettyPrint)
         try content.write(to: fileURL, atomically: true, encoding: .utf8)
