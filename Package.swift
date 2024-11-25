@@ -7,7 +7,7 @@ let package = Package(
     name: "seconda",
     platforms: [.macOS(.v14)],
     dependencies: [
-        .package(url: "https://github.com/thecatalinstan/CSFeedKit", from: "1.0.0")
+        .package(url: "https://github.com/tokizuoh/CSFeedKit", branch: "add-pubdate-to-init")
     ],
     targets: [
         .executableTarget(

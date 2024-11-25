@@ -14,15 +14,22 @@ struct FeedGenerator {
             description: "description"
         )
         
-        let items: [CSRSSFeedItem] = commitList.map { commit in
+        let items: [CSRSSFeedItem] = try commitList.map { commit in
             let title = String(commit.message.prefix(50)) + (commit.message.count > 50 ? "..." : "")
             let cleanedTitle = title.replacingOccurrences(of: "\\s*(\\n|\\r)\\s*", with: " ", options: .regularExpression)
             
-            return CSRSSFeedItem(
-                title: cleanedTitle,
-                link: commit.url,
-                description: commit.message
-            )
+            if let pubDate = ISO8601DateFormatter().date(from: commit.committedDate) {
+                return CSRSSFeedItem(
+                    title: cleanedTitle,
+                    link: commit.url,
+                    description: commit.message,
+                    pubDate: pubDate,
+                    creator: nil,
+                    enclosure: nil
+                )
+            } else {
+                throw SecondaError.invalidDateFormat
+            }
         }
         channel.items = items
         

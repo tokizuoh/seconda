@@ -1,13 +1,13 @@
 {
-  "originHash" : "e8419ee7e6ec9e04055e319228e6ad408d89dd5928e759c8bbce0b17e9fb6dd8",
+  "originHash" : "3d089356a7e54031e92f1fc0d2f4c5dcc7714fdb25606251f537fa922e872749",
   "pins" : [
     {
       "identity" : "csfeedkit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/thecatalinstan/CSFeedKit",
+      "location" : "https://github.com/tokizuoh/CSFeedKit",
       "state" : {
-        "revision" : "273343770028aea2a41f06ea3cec3f741c7b62c9",
-        "version" : "1.0.0"
+        "branch" : "add-pubdate-to-init",
+        "revision" : "35024b25f4b8ea76eea5e2b91b3d6885026c4194"
       }
     }
   ],

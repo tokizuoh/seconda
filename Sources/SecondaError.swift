@@ -5,4 +5,5 @@
 
 enum SecondaError: Error {
     case emptyWorkingDirectory
+    case invalidDateFormat
 }

@@ -3,8 +3,8 @@
     <title>swiftlang/swift CHANGELOG.md</title>
     <link>https://github.com/tokizuoh/seconda/swift/rss.xml</link>
     <description><![CDATA[description]]></description>
-    <lastBuildDate>Sun, 24 Nov 2024 17:58:33 +0900</lastBuildDate>
-    <pubDate>Sun, 24 Nov 2024 17:58:33 +0900</pubDate>
+    <lastBuildDate>Tue, 26 Nov 2024 08:28:28 +0900</lastBuildDate>
+    <pubDate>Tue, 26 Nov 2024 08:28:28 +0900</pubDate>
     <language>en-JP</language>
     <ttl>3600</ttl>
     <item>
@@ -12,6 +12,7 @@
         <link>https://github.com/swiftlang/swift/commit/7a31f393576117ecc399b78dd593462434660f05</link>
         <description><![CDATA[Update CHANGELOG.md (#77093)]]></description>
         <guid isPermaLink="true">https://github.com/swiftlang/swift/commit/7a31f393576117ecc399b78dd593462434660f05</guid>
+        <pubDate>Fri, 18 Oct 2024 14:31:06 +0900</pubDate>
     </item>
     <item>
         <title>SE-0444: Promote MemberImportVisibility to an upco...</title>
@@ -23,6 +24,7 @@ experimental.
 
 Resolves rdar://126284512.]]></description>
         <guid isPermaLink="true">https://github.com/swiftlang/swift/commit/d37303680552665058278db6349f73f92ed2bf5c</guid>
+        <pubDate>Fri, 27 Sep 2024 05:41:14 +0900</pubDate>
     </item>
     <item>
         <title>Ignore inactive IfConfigDecls in SourceKit's synta...</title>
@@ -32,6 +34,7 @@ Resolves rdar://126284512.]]></description>
 Clients that need syntactic information should use SourceKit-LSP or
 swift-syntax.]]></description>
         <guid isPermaLink="true">https://github.com/swiftlang/swift/commit/9936f64c2a1297ccb46165f181de7ccafd0892c7</guid>
+        <pubDate>Sun, 08 Sep 2024 13:36:39 +0900</pubDate>
     </item>
     <item>
         <title>Changelog: add notes about SE-0442 Add a note abo...</title>
@@ -40,12 +43,14 @@ swift-syntax.]]></description>
 
 Add a note about the accepted developer experience change from: https://github.com/swiftlang/swift-evolution/blob/main/proposals/0442-allow-taskgroup-childtaskresult-type-to-be-inferred.md]]></description>
         <guid isPermaLink="true">https://github.com/swiftlang/swift/commit/7381bf0da9616b88b649c940ea29de9b4200cb95</guid>
+        <pubDate>Wed, 07 Aug 2024 17:00:38 +0900</pubDate>
     </item>
     <item>
         <title>Fixed @preconcurrency syntax in CHANGELOG</title>
         <link>https://github.com/swiftlang/swift/commit/2a188ed123da731dd3f1ec62a370573d37eccd51</link>
         <description><![CDATA[Fixed @preconcurrency syntax in CHANGELOG]]></description>
         <guid isPermaLink="true">https://github.com/swiftlang/swift/commit/2a188ed123da731dd3f1ec62a370573d37eccd51</guid>
+        <pubDate>Wed, 05 Jun 2024 23:11:30 +0900</pubDate>
     </item>
 </channel>
 </rss>
