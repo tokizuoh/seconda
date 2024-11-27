@@ -61,7 +61,7 @@ struct App {
         let fileURL = Bundle.module.url(forResource: "token", withExtension: "txt")!
         let token = (try! String(contentsOf: fileURL, encoding: .utf8)).trimmingCharacters(in: .whitespacesAndNewlines)
         #else
-        let token = ""
+        let token = ProcessInfo.processInfo.environment["GITHUB_TOKEN"]!
         #endif
         
         do {
